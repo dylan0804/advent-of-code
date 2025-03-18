@@ -8,12 +8,6 @@ import (
 	"strings"
 )
 
-func check(e error) {
-	if e != nil {
-		panic(e)
-	}
-}
-
 type intHeap []int
 
 func (h intHeap) Len() int { return len(h) }
@@ -48,10 +42,12 @@ func part1() int {
 
 		nums := strings.Fields(line)
 
-		num, _ := strconv.Atoi(nums[0])
+		num, err := strconv.Atoi(nums[0])
+		check(err)
 		heap.Push(hl, num)
 
-		num, _ = strconv.Atoi(nums[1])
+		num, err = strconv.Atoi(nums[1])
+		check(err)
 		heap.Push(hr, num)
 	}
 
