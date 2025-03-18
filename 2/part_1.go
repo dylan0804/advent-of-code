@@ -64,8 +64,6 @@ func processLine(line []string) bool {
 	if (isAscending(line) || isDescending(line)) && isSafe(line) {
 		return true
 	}
-
-	
 	
 	return false
 }

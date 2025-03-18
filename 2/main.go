@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func check(e error) {
 	if e != nil {
@@ -10,4 +12,5 @@ func check(e error) {
 
 func main() {
 	fmt.Println(part1())
+	fmt.Println(part2())
 }
