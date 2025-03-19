@@ -16,5 +16,7 @@ func main() {
 	check(err)
 
 	fmt.Println(part1(file))
+	fmt.Println(part2(file))
+
 
 }
