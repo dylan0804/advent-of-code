@@ -22,7 +22,7 @@ func (h *intHeap) Pop() any {
 	oldHeap := *h
 	oldLength := len(oldHeap)
 	poppedValue := oldHeap[oldLength-1]
-	*h = oldHeap[0 : oldLength-1]
+	*h = oldHeap[:oldLength-1]
 	return poppedValue
 }
 

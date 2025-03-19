@@ -9,6 +9,6 @@ func check(e error) {
 }
 
 func main() {
-	// fmt.Println(part1())
+	fmt.Println(part1())
 	fmt.Println(part2())
 }
