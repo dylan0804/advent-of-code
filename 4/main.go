@@ -1,6 +1,9 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func check(e error) {
 	if e != nil {
@@ -12,5 +15,6 @@ func main() {
 	file, err := os.Open("./input.txt")
 	check(err)
 
-	part1(file)
+	fmt.Println(part1(file))
+	fmt.Println(part2(file))
 }

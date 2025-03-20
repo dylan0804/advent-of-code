@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 )
 
@@ -42,7 +41,7 @@ func checkAllDirections(grid [][]rune, row, col, dr, dc int) bool {
 	return true
 }
 
-func part1(file *os.File) {
+func part1(file *os.File) int {
 	grid := processFile(file)
 
 	directions := [][]int{
@@ -74,5 +73,5 @@ func part1(file *os.File) {
 		}
 	}
 
-	fmt.Println(count)
+	return count
 }
