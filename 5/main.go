@@ -24,4 +24,5 @@ func main() {
 	sections := strings.Split(string(content), "\n\n")
 
 	fmt.Println(part1(sections))
+	fmt.Println(part2(sections))
 }
