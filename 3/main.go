@@ -14,6 +14,7 @@ func check(e error) {
 func main() {
 	file, err := os.Open("./input.txt")
 	check(err)
+	defer file.Close()
 
 	fmt.Println(part1(file))
 	fmt.Println(part2(file))

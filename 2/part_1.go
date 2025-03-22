@@ -71,6 +71,7 @@ func processLine(line []string) bool {
 func part1() int {
 	file, err := os.Open("./input.txt")
 	check(err)
+	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
 

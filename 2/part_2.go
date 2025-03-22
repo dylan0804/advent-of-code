@@ -30,6 +30,7 @@ func processLineTwo(line []string) bool {
 func part2() int {
 	file, err := os.Open("./input.txt")
 	check(err)
+	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
 

@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"strings"
 )
@@ -36,8 +35,6 @@ func processStringTwo(text string, mulEnabled bool) int {
 		earliestType = "mul"
 	}
 
-	fmt.Println(earliestType)
-
 	if earliestType == "do" {
 		return processStringTwo(text[earliestPos+3:], true)
 	} else if earliestType == "dont" {
@@ -51,8 +48,6 @@ func processStringTwo(text string, mulEnabled bool) int {
 	
 				if secondNumIndex < len(text) && text[secondNumIndex] == ')' {
 					calculatedValue = firstNum * secondNum
-
-					fmt.Println(firstNum, secondNum)
 	
 					return calculatedValue + processStringTwo(text[secondNumIndex+1:], mulEnabled)
 				}
