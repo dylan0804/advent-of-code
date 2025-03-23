@@ -42,11 +42,12 @@ func part1(grid []string) int {
 	for i := range visited {
 		visited[i] = make([]bool, len(grid[0]))
 	}
-
+	
 	for row := 0; row < rows; row++ {
 		for col := 0; col < cols; col++ {
 			if grid[row][col] == '^' {
 				count = trackPosition(0, startDirection, grid, row, col, visited)
+				break
 			}
 		}
 	}

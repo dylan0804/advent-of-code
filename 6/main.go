@@ -24,4 +24,5 @@ func main() {
 	grid := strings.Split(string(content), "\n")
 
 	fmt.Println(part1(grid))
+	fmt.Println(part2(grid))
 }
